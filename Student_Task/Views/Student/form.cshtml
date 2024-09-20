@@ -1,0 +1,72 @@
+﻿<div class="container mt-5">
+    <h2>Student Registration Form</h2>
+    <form asp-action="form" asp-controller="Student" method="post" onsubmit="return validation()">
+       
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+            <span id="nameerror" style="color:red"></span>
+        </div>
+
+       
+        <div class="mb-3">
+            <label for="createdDate" class="form-label">brith Date</label>
+            <input type="date" class="form-control" id="Date" name="createdDate">
+            <span id="dateerror" style="color:red"></span>
+        </div>
+
+        <!-- Email Input -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+            <span id="emailerror" style="color:red"></span>
+        </div>
+
+        <!-- Address Input -->
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address">
+        </div>
+
+      
+        <div class="mb-3">
+            <label for="subjects" class="form-label">Subjects</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="subject" value="Arabic" id="subjectArabic">
+                <label class="form-check-label" for="subjectArabic">
+                    Arabic
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="subject" value="English" id="subjectEnglish">
+                <label class="form-check-label" for="subjectEnglish">
+                    English
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="subject" value="Science" id="subjectScience">
+                <label class="form-check-label" for="subjectScience">
+                    Science
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="subject" value="History" id="subjectHistory">
+                <label class="form-check-label" for="subjectHistory">
+                    History
+                </label>
+            </div>
+            <span id="suberror" style="color:red"></span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+@section  validation{
+    <script src="~/js/JavaScript.js">
+
+    </script>
+}
+
